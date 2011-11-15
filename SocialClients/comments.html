@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Facebook Demo</title>
+        <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.0.0.min.css">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<style>
+	.sidebar {
+	     background-color: rgba(190, 190, 190, 0.2);
+	     height:300px;
+	}
+	</style>
+    </head>
+
+    <body style="margin-top:50px; margin-left:80px; margin-right:80px;">
+        <div id="fb-root"></div>
+        <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+        
+        <div class="topbar-wrapper" style="z-index: 5;">
+            <div class="topbar">
+                <div class="container fixed">
+                    <h3><a class="logo" href="/social/index.html">Craig's Facebook Demo</a></h3>
+                    <ul>
+                        <li class="active"><a href="/social/index.html">Home</a></li>
+                   </ul>
+                   <form action="">
+                       <input placeholder="Search" type="text">
+                   </form>
+               </div>
+           </div>
+       </div>
+
+       <div class="container-fluid">
+            <div class="sidebar" id="sidemenu">
+	         <a href="login.html">Login Button</a><br/>
+	         <a href="like.html">Like Button</a><br/>
+	         <a href="likebox.html">Like Box</a><br/>
+	         <a href="comments.html">Comments Box</a><br/>
+	         <a href="activity.html">Activity Feed</a><br/>
+	         <a href="recommendations.html">Recommendations</a><br/>
+	         <a href="registration.html">Registration</a><br/>
+	         <a href="facepile.html">Facepile</a><br/>
+                 <br/>
+                 <a href="recommendations-bar.html">Recommendations Bar</a><br/>
+	    </div>
+	    <div class="content">
+                 <p>The comments plugin enables users to post comments to your site.</p>
+                 <fb:comments href="http://www.habuma.com/social/index.html" num_posts="10" width="700"></fb:comments>
+	    </div>
+       </div>
+
+       <div>
+       </div>
+    </body>
+
+
+</html>

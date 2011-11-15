@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Facebook Demo</title>
+        <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.0.0.min.css">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<style>
+	.sidebar {
+	     background-color: rgba(190, 190, 190, 0.2);
+	     height:300px;
+	}
+	</style>
+    </head>
+
+    <body style="margin-top:50px; margin-left:80px; margin-right:80px;">
+        <div id="fb-root"></div>
+        <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+        
+	<script type='text/javascript'>
+	    FB.init({appId: '122606237802194', status: true, cookie: true, xfbml: true, oauth: false});
+	</script>
+
+        <div class="topbar-wrapper" style="z-index: 5;">
+            <div class="topbar">
+                <div class="container fixed">
+                    <h3><a class="logo" href="/social/index.html">Craig's Facebook Demo</a></h3>
+                    <ul>
+                        <li class="active"><a href="/social/index.html">Home</a></li>
+                   </ul>
+                   <form action="">
+                       <input placeholder="Search" type="text">
+                   </form>
+               </div>
+           </div>
+       </div>
+
+       <div class="container-fluid">
+            <div class="sidebar" id="sidemenu">
+	         <a href="login.html">Login Button</a><br/>
+	         <a href="like.html">Like Button</a><br/>
+	         <a href="likebox.html">Like Box</a><br/>
+	         <a href="comments.html">Comments Box</a><br/>
+	         <a href="activity.html">Activity Feed</a><br/>
+	         <a href="recommendations.html">Recommendations</a><br/>
+	         <a href="registration.html">Registration</a><br/>
+	         <a href="facepile.html">Facepile</a><br/>
+                 <br/>
+                 <a href="recommendations-bar.html">Recommendations Bar</a><br/>
+	    </div>
+	    <div class="content">
+	    <h2>Like Box</h2>
+
+  <p>The Like Box is a social plugin that enables Facebook Page owners to attract and gain Likes from their own website. <a href="https://developers.facebook.com/docs/reference/plugins/like-box/" target="_blank">Documentation</a></p>
+
+  <fb:like-box href="http://www.facebook.com/springinaction" width="292" show_faces="true" stream="false" header="true"></fb:like-box>
+
+</div>
+	    </div>
+       </div>
+
+       <div>
+       </div>
+    </body>
+
+
+</html>
