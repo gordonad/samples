@@ -12,13 +12,6 @@
     </head>
 
     <body style="margin-top:50px; margin-left:80px; margin-right:80px;">
-        <div id="fb-root"></div>
-        <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-        
-	<script type='text/javascript'>
-	    FB.init({appId: '122606237802194', status: true, cookie: true, xfbml: true, oauth: false});
-	</script>
-
         <div class="topbar-wrapper" style="z-index: 5;">
             <div class="topbar">
                 <div class="container fixed">
@@ -43,6 +36,75 @@
 	    <div class="content">
 	       <h2>+1 Button</h2>
 
+			<h3>No Annotation</h3>
+			<div style="display:inline-block;border:">
+				<div style="width:150px;text-align:center;"><g:plusone size="small" annotation="none"></g:plusone><br/><br/></div>
+				<div style="width:150px;text-align:center;"><b>Small</b></div>
+			</div>
+			&nbsp;
+			<div style="display:inline-block;border:">
+				<div style="width:150px;text-align:center;"><g:plusone size="medium" annotation="none"></g:plusone><br/><br/></div>
+				<div style="width:150px;text-align:center;"><b>Medium</b></div>
+			</div>
+			<div style="display:inline-block;border:">
+				<div style="width:150px;text-align:center;"><g:plusone annotation="none"></g:plusone><br/><br/></div>
+				<div style="width:150px;text-align:center;"><b>Standard</b></div>
+			</div>
+			&nbsp;
+			<div style="display:inline-block;border:">
+				<div style="width:150px;text-align:center;"><g:plusone size="tall" annotation="none"></g:plusone><br/><br/></div>
+				<div style="width:150px;text-align:center;"><b>Tall</b></div>
+			</div>
+
+			<h3>Bubble Annotation</h3>
+			<div style="display:inline-block;">
+				<div style="width:150px;text-align:center;"><g:plusone size="small" annotation="bubble"></g:plusone><br/><br/></div>
+				<div style="width:150px;text-align:center;"><b>Small</b></div>
+			</div>
+			<div style="display:inline-block;">
+				<div style="width:150px;text-align:center;"><g:plusone size="medium" annotation="bubble"></g:plusone><br/><br/></div>
+				<div style="width:150px;text-align:center;"><b>Medium</b></div>
+			</div>
+			<div style="display:inline-block;">
+				<div style="width:150px;text-align:center;"><g:plusone annotation="bubble"></g:plusone><br/><br/></div>
+				<div style="width:150px;text-align:center;"><b>Standard</b></div>
+			</div>
+			<div style="display:inline-block;">
+				<div style="width:150px;text-align:center;"><g:plusone size="tall" annotation="bubble"></g:plusone><br/><br/></div>
+				<div style="width:150px;text-align:center;"><b>Tall</b></div>
+			</div>
+			<br/>
+
+			<h3>Inline Annotation</h3>
+			<div style="display:inline-block;border:">
+				<div style="width:300px;text-align:center;"><g:plusone size="small" annotation="inline"></g:plusone><br/><br/></div>
+				<div style="width:300px;text-align:center;"><b>Small</b></div>
+			</div>
+			&nbsp;
+			<div style="display:inline-block;border:">
+				<div style="width:300px;text-align:center;"><g:plusone size="medium" annotation="inline"></g:plusone><br/><br/></div>
+				<div style="width:300px;text-align:center;"><b>Medium</b></div>
+			</div>
+			<br/><br/>
+			<div style="display:inline-block;border:">
+				<div style="width:300px;text-align:center;"><g:plusone annotation="inline"></g:plusone><br/><br/></div>
+				<div style="width:300px;text-align:center;"><b>Standard</b></div>
+			</div>
+			&nbsp;
+			<div style="display:inline-block;border:">
+				<div style="width:300px;text-align:center;"><g:plusone size="tall" annotation="inline"></g:plusone><br/><br/></div>
+				<div style="width:300px;text-align:center;"><b>Tall</b></div>
+			</div>
+
+			<!-- Place this render call where appropriate -->
+			<script type="text/javascript">
+				//  window.___gcfg = {lang: 'fi'};
+		  		(function() {
+		      		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		          		po.src = 'https://apis.google.com/js/plusone.js';
+			      		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+						})();
+			</script>
 	    </div>
        </div>
 
