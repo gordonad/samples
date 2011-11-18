@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Social Clients Demo</title>
+        <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.0.0.min.css">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<style>
+	.sidebar {
+	     background-color: rgba(190, 190, 190, 0.2);
+	     height:100%;
+	}
+	</style>
+    </head>
+
+    <body style="margin-top:50px; margin-left:80px; margin-right:80px;">
+        <div id="fb-root"></div>
+        <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+        
+	<script type='text/javascript'>
+	    FB.init({appId: '122606237802194', status: true, cookie: true, xfbml: true, oauth: false});
+	</script>
+
+        <div class="topbar-wrapper" style="z-index: 5;">
+            <div class="topbar">
+                <div class="container fixed">
+                    <h3><a class="logo" href="/social/index.html">Social Clients Demo</a></h3>
+                    <ul>
+                        <li class="active"><a href="/social/facebook/index.html">Facebook</a></li>
+                        <li class="active"><a href="/social/twitter/index.html">Twitter</a></li>
+                        <li class="active"><a href="/social/linkedin/index.html">LinkedIn</a></li>
+                        <li class="active"><a href="/social/googleplus/index.html">Google+</a></li>
+                        <li class="active"><a href="/social/misc/index.html">Misc</a></li>
+                   </ul>
+
+               </div>
+           </div>
+       </div>
+
+       <div class="container-fluid">
+            <div class="sidebar" id="sidemenu">
+			 <b>Javascript SDK</b><br/>
+			 TBD<br/>
+			 <br/>
+			 <b>Social Plugins</b><br/>
+	         <a href="/social/facebook/login.html">Login Button</a><br/>
+	         <a href="/social/facebook/like.html">Like Button</a><br/>
+	         <a href="/social/facebook/likebox.html">Like Box</a><br/>
+	         <a href="/social/facebook/comments.html">Comments Box</a><br/>
+	         <a href="/social/facebook/activity.html">Activity Feed</a><br/>
+	         <a href="/social/facebook/recommendations.html">Recommendations</a><br/>
+	         <a href="/social/facebook/registration.html">Registration</a><br/>
+	         <a href="/social/facebook/facepile.html">Facepile</a><br/>
+             <a href="/social/facebook/recommendations-bar.html">Recommendations Bar</a> (<i>beta</i>)<br/>
+			 <br/>
+			 <b>Dialogs</b><br/>
+	         <a href="/social/facebook/feedDialog.html">Feed Dialog</a><br/>
+	         <a href="/social/facebook/friendsDialog.html">Friends Dialog</a><br/>
+	         <a href="/social/facebook/oauthDialog.html">OAuth Dialog</a><br/>
+	         <a href="/social/facebook/payDialog.html">Pay Dialog</a><br/>
+	         <a href="/social/facebook/requestDialog.html">Request Dialog</a><br/>
+	         <a href="/social/facebook/sendDialog.html">Send Dialog</a><br/>
+	    </div>
+	    <div class="content">
+
+	    <h2>Like Button</h2>
+
+
+  <p>The Like button lets a user share your content with friends on Facebook. When the user clicks the Like button on your site, a story appears in the user's friends' News Feed with a link back to your website. <a href="https://developers.facebook.com/docs/reference/plugins/like/" target="_blank">Documentation</a></p>
+
+  <fb:like></fb:like>
+
+<br/><br/>
+<hr/>
+
+  <p>Like button with a send button and show faces:</p>
+
+  <fb:like send="true" width="450" show_faces="true"></fb:like>
+
+</div>
+	    </div>
+       </div>
+
+       <div>
+       </div>
+    </body>
+
+
+</html>

@@ -1,12 +1,12 @@
 <html>
     <head>
-        <title>Facebook Demo</title>
+        <title>Social Clients Demo</title>
         <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.0.0.min.css">
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 	<style>
 	.sidebar {
 	     background-color: rgba(190, 190, 190, 0.2);
-	     height:300px;
+	     height:100%;
 	}
 	</style>
     </head>
@@ -15,10 +15,14 @@
         <div id="fb-root"></div>
         <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
         
+	<script type='text/javascript'>
+	    FB.init({appId: '122606237802194', status: true, cookie: true, xfbml: true, oauth: false});
+	</script>
+
         <div class="topbar-wrapper" style="z-index: 5;">
             <div class="topbar">
                 <div class="container fixed">
-                    <h3><a class="logo" href="index.html">Social Clients Demos</a></h3>
+                    <h3><a class="logo" href="/social/index.html">Social Clients Demo</a></h3>
                     <ul>
                         <li class="active"><a href="/social/facebook/index.html">Facebook</a></li>
                         <li class="active"><a href="/social/twitter/index.html">Twitter</a></li>
@@ -32,11 +36,17 @@
        </div>
 
        <div class="container-fluid">
+        <div class="sidebar" id="sidemenu">
+	    </div>
 	    <div class="content">
-	         <h2>Social Clients Demos</h2>
+	       <h2>Miscellaneous Javascript and Plugin Demos</h2>
+
 	    </div>
        </div>
 
+       <div>
+       </div>
     </body>
+
 
 </html>
