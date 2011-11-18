@@ -9,6 +9,8 @@
 	     height:100%;
 	}
 	</style>
+    <script src="http://platform.twitter.com/anywhere.js?id=7yWLgCOuQhIpPyffm0o2Vg" type="text/javascript"></script>
+	<script src="/social/libs/jquery-1.7.min.js"></script>
     </head>
 
     <body style="margin-top:50px; margin-left:80px; margin-right:80px;">
@@ -47,8 +49,33 @@
 			 <a href="/social/twitter/anywhereApi.html">Javascript API</a><br/>
 	    </div>
 	    <div class="content">
-	       <h2>Hovercards</h2>
+	       <h2>Twitter @Anywhere Javascript API</h2>
 
+			<h3 id="greeting">Hello, </h3>			
+			
+			<div id="friends">
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function(){
+			  		twttr.anywhere(function (T) {
+						if (T.isConnected()) {
+					     	T.User.current(function(me) {
+								$("#greeting").append(me.screenName + "!");
+								
+								$("#friends").append("<p>Here are up to 100 of your friends:</p>");
+								$("#friends").append("<ul>");
+								me.friends().each(function(friend){
+									$("#friends").append('<li>' + friend.screenName + '</li>');
+								});
+								$("#friends").append("</ul>");
+					     	});
+						} else {
+							$("#greeting").append("stranger!");
+							$("#friends").append("<p>I don't know who your friends are. Sign in first.</p>");
+						}
+			  		});
+		 		});			
+			</script>
 	    </div>
        </div>
 
