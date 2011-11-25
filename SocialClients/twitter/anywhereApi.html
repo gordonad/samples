@@ -60,7 +60,8 @@
 			  		twttr.anywhere(function (T) {
 						if (T.isConnected()) {
 					     	T.User.current(function(me) {
-								$("#greeting").append(me.screenName + "!");
+							// T.User.find('royclarkson', function(me) {
+								$("#greeting").append(me.name + "!");
 								
 								$("#friends").append("<p>Here are up to 100 of your friends:</p>");
 								$("#friends").append("<ul>");
