@@ -28,7 +28,7 @@
 		  (function(d){
 		     var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
 		     js = d.createElement('script'); js.id = id; js.async = true;
-		     js.src = "//connect.facebook.net/en_US/all.js";
+		     js.src = "//connect.facebook.net/es_MX/all.js";
 		     d.getElementsByTagName('head')[0].appendChild(js);
 		   }(document));
 		</script>
@@ -44,38 +44,41 @@
                         <li class="active"><a href="/social/googleplus/index.html">Google+</a></li>
                         <li class="active"><a href="/social/misc/index.html">Misc</a></li>
                    </ul>
-
                </div>
            </div>
        </div>
 
        <div class="container-fluid">
             <div class="sidebar" id="sidemenu">
-			 <b>Javascript SDK</b><br/>
-			 TBD<br/>
-			 <br/>
-			 <b>Social Plugins</b><br/>
-	         <a href="/social/facebook/login.html">Login Button</a><br/>
-	         <a href="/social/facebook/like.html">Like Button</a><br/>
-	         <a href="/social/facebook/likebox.html">Like Box</a><br/>
-	         <a href="/social/facebook/comments.html">Comments Box</a><br/>
-	         <a href="/social/facebook/activity.html">Activity Feed</a><br/>
-	         <a href="/social/facebook/recommendations.html">Recommendations</a><br/>
-	         <a href="/social/facebook/registration.html">Registration</a><br/>
-	         <a href="/social/facebook/facepile.html">Facepile</a><br/>
+			   <b>Javascript SDK</b><br/>
+			   TBD<br/>
+			   <br/>
+			   <b>Social Plugins</b><br/>
+	           <a href="/social/facebook/login.html">Login Button</a><br/>
+	           <a href="/social/facebook/like.html">Like Button</a><br/>
+	           <a href="/social/facebook/likebox.html">Like Box</a><br/>
+	           <a href="/social/facebook/comments.html">Comments Box</a><br/>
+	           <a href="/social/facebook/activity.html">Activity Feed</a><br/>
+	           <a href="/social/facebook/recommendations.html">Recommendations</a><br/>
+	           <a href="/social/facebook/registration.html">Registration</a><br/>
+	           <a href="/social/facebook/facepile.html">Facepile</a><br/>
+             <a href="/social/facebook/addToTimeline.html">Add to Timeline</a> (<i>beta</i>)<br/>
+             <a href="/social/facebook/newActivityFeed.html">Activity Feed</a> (<i>beta</i>)<br/>
+             <a href="/social/facebook/newFacepile.html">Facepile</a> (<i>beta</i>)<br/>
              <a href="/social/facebook/recommendations-bar.html">Recommendations Bar</a> (<i>beta</i>)<br/>
-			 <br/>
-			 <b>Dialogs</b><br/>
-	         <a href="/social/facebook/feedDialog.html">Feed Dialog</a><br/>
-	         <a href="/social/facebook/friendsDialog.html">Friends Dialog</a><br/>
-	         <a href="/social/facebook/oauthDialog.html">OAuth Dialog</a><br/>
-	         <a href="/social/facebook/payDialog.html">Pay Dialog</a><br/>
-	         <a href="/social/facebook/requestDialog.html">Request Dialog</a><br/>
-	         <a href="/social/facebook/sendDialog.html">Send Dialog</a><br/>
-	    </div>
-	    <div class="content">
-	    <h2>Login Button</h2>
-  <p>The Login Button shows profile pictures of the user's friends who have already signed up for your site in addition to a login button. <a href="https://developers.facebook.com/docs/reference/plugins/login/" target="_blank">Documentation</a></p>
+             <a href="/social/facebook/recommendations-box.html">Recommendations Box</a> (<i>beta</i>)<br/>
+			   <br/>
+			   <b>Dialogs</b><br/>
+	           <a href="/social/facebook/feedDialog.html">Feed Dialog</a><br/>
+	           <a href="/social/facebook/friendsDialog.html">Friends Dialog</a><br/>
+	           <a href="/social/facebook/oauthDialog.html">OAuth Dialog</a><br/>
+	           <a href="/social/facebook/payDialog.html">Pay Dialog</a><br/>
+	           <a href="/social/facebook/requestDialog.html">Request Dialog</a><br/>
+	           <a href="/social/facebook/sendDialog.html">Send Dialog</a><br/>
+	        </div> <!-- sidemenu -->
+			<div class="content">
+	    		<h2>Login Button</h2>
+  				<p>The Login Button shows profile pictures of the user's friends who have already signed up for your site in addition to a login button. <a href="https://developers.facebook.com/docs/reference/plugins/login/" target="_blank">Documentation</a></p>
 
   <script>
     function sayHi() {
@@ -90,15 +93,65 @@
         );
     }
   </script>
+				<p>Normal:</p>
+  				<fb:login-button scope="user_about_me,publish_stream" 
+								 autologoutlink="true" 
+								 onlogin="sayHi();">
+				</fb:login-button>
+				<br/>
+				<hr/>
+				
+				<p>Small:</p>
+  				<fb:login-button scope="user_about_me,publish_stream" 
+								 autologoutlink="true" 
+								 onlogin="sayHi();"
+								 size="small">
+				</fb:login-button>				
 
-  <fb:login-button perms="user_about_me,publish_stream" autologoutlink="true" onlogin="sayHi();"></fb:login-button>
-</div>
-	    </div>
-       </div>
+				<br/>
+				<hr/>
+				
+				<p>Medium:</p>
+  				<fb:login-button scope="user_about_me,publish_stream" 
+								 autologoutlink="true" 
+								 onlogin="sayHi();"
+								 size="medium">
+				</fb:login-button>				
 
-       <div>
-       </div>
-    </body>
+				<br/>
+				<hr/>
+				
+				<p>Large:</p>
+  				<fb:login-button scope="user_about_me,publish_stream" 
+								 autologoutlink="true" 
+								 onlogin="sayHi();"
+								 size="large">
+				</fb:login-button>				
+
+				<br/>
+				<hr/>
+				
+				<p>X-Large:</p>
+  				<fb:login-button scope="user_about_me,publish_stream" 
+								 autologoutlink="true" 
+								 onlogin="sayHi();"
+								 size="xlarge">
+				</fb:login-button>				
+
+				<br/>
+				<hr/>
+				
+				<p>Icon:</p>
+  				<fb:login-button scope="user_about_me,publish_stream" 
+								 autologoutlink="true" 
+								 onlogin="sayHi();"
+								 size="icon">
+				</fb:login-button>				
+				
+			</div> <!-- content -->
+		</div> <!-- container-fluid -->
+
+	</body>
 
 
 </html>

@@ -31,15 +31,6 @@
 		     js.src = "//connect.facebook.net/en_US/all.js";
 		     d.getElementsByTagName('head')[0].appendChild(js);
 		   }(document));
-		
-		   function showSendDialog() {
-				FB.ui({
-					method: 'send',
-					name: 'Spring in Action, 3rd Edition',
-					picture: 'http://www.manning.com/walls4/walls4_cover150.jpg',
-					link: 'http://www.manning.com/walls4',
-				});			
-			}
 		</script>
 
         <div class="topbar-wrapper" style="z-index: 5;">
@@ -56,9 +47,9 @@
 
                </div>
            </div>
-       </div>
+       	</div>
 
-       <div class="container-fluid">
+       	<div class="container-fluid">
             <div class="sidebar" id="sidemenu">
 			 <b>Javascript SDK</b><br/>
 			 TBD<br/>
@@ -85,20 +76,16 @@
 	         <a href="/social/facebook/payDialog.html">Pay Dialog</a><br/>
 	         <a href="/social/facebook/requestDialog.html">Request Dialog</a><br/>
 	         <a href="/social/facebook/sendDialog.html">Send Dialog</a><br/>
-	    </div>
-	    <div class="content">
-	       <h2>Send Dialog</h2>
+	    	</div>
+	    	<div class="content">
+	    		<h2>Add to Timeline (beta)</h2>
 
-			<h3>Javascript-triggered Send Dialog</h3>
-			<button onclick="showSendDialog()">Send Dialog</button>
-			<br/><br/>
-			<h3>URL-based Send Dialog</h3>			
-			<a href="https://www.facebook.com/dialog/send?app_id=122606237802194&name=Spring+in+Action%2C+3rd+Edition&link=http://www.manning.com/walls4&redirect_uri=http://www.habuma.com/social/closer.html&picture=http://www.manning.com/walls4/walls4_cover150.jpg&display=popup" target="_send">Send</a>
-
-	    </div>
-       </div>
-
-    </body>
-
-
+				<p>Add to Timeline Button:</p>
+				<fb:add-to-timeline show-faces="true" mode="button"></fb:add-to-timeline>
+				<br/><br/><hr/>
+				<p>Add to Timeline Box:</p>
+				<fb:add-to-timeline show-faces="true" mode="box"></fb:add-to-timeline>
+			</div>
+		</div>
+	</body>
 </html>

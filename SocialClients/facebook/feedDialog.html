@@ -31,6 +31,15 @@
 		     js.src = "//connect.facebook.net/en_US/all.js";
 		     d.getElementsByTagName('head')[0].appendChild(js);
 		   }(document));
+
+		   function showFeedDialog() {
+				FB.ui({
+					method: 'feed',
+					name: 'Spring in Action, 3rd Edition',
+					picture: 'http://www.manning.com/walls4/walls4_cover150.jpg',
+					link: 'http://www.manning.com/walls4',
+				});			
+			}
 		</script>
 
         <div class="topbar-wrapper" style="z-index: 5;">
@@ -63,7 +72,11 @@
 	         <a href="/social/facebook/recommendations.html">Recommendations</a><br/>
 	         <a href="/social/facebook/registration.html">Registration</a><br/>
 	         <a href="/social/facebook/facepile.html">Facepile</a><br/>
+             <a href="/social/facebook/addToTimeline.html">Add to Timeline</a> (<i>beta</i>)<br/>
+             <a href="/social/facebook/newActivityFeed.html">Activity Feed</a> (<i>beta</i>)<br/>
+             <a href="/social/facebook/newFacepile.html">Facepile</a> (<i>beta</i>)<br/>
              <a href="/social/facebook/recommendations-bar.html">Recommendations Bar</a> (<i>beta</i>)<br/>
+             <a href="/social/facebook/recommendations-box.html">Recommendations Box</a> (<i>beta</i>)<br/>
 			 <br/>
 			 <b>Dialogs</b><br/>
 	         <a href="/social/facebook/feedDialog.html">Feed Dialog</a><br/>
@@ -75,12 +88,15 @@
 	    </div>
 	    <div class="content">
 	       <h2>Feed Dialog</h2>
+			<h3>Javascript-triggered Feed Dialog</h3>
+			<button onclick="showFeedDialog()">Feed Dialog</button>
+			<br/><br/>
+			<h3>URL-based Feed Dialog</h3>			
+			<a href="https://www.facebook.com/dialog/feed?app_id=122606237802194&name=Spring+in+Action%2C+3rd+Edition&link=http://www.manning.com/walls4&redirect_uri=http://www.habuma.com/social/closer.html&picture=http://www.manning.com/walls4/walls4_cover150.jpg&display=popup" target="_feed">Feed</a>
 
 	    </div>
        </div>
 
-       <div>
-       </div>
     </body>
 
 
