@@ -9,6 +9,7 @@
 	     height:100%;
 	}
 	</style>
+    <script src="http://platform.twitter.com/anywhere.js?id=7yWLgCOuQhIpPyffm0o2Vg" type="text/javascript"></script>
     </head>
 
     <body style="margin-top:50px; margin-left:80px; margin-right:80px;">
@@ -39,21 +40,30 @@
 	         <a href="/social/twitter/followIntent.html">Follow Intent</a><br/>
 			 <br/>
 			 <b>Twitter @Anywhere</b><br/>
-	         <a href="/social/twitter/linkification.html">Auto-Linkification</a><br/>
-	         <a href="/social/twitter/hovercards.html">Hovercards</a><br/>
+	         <a href="/social/twitter/linkification.html">Auto-Linkification and Hovercards</a><br/>
 	         <a href="/social/twitter/awFollowButton.html">Follow Button</a><br/>
 	         <a href="/social/twitter/tweetBox.html">Tweet Box</a><br/>
 	         <a href="/social/twitter/connectButton.html">Connect Button</a><br/>
 			 <a href="/social/twitter/anywhereApi.html">Javascript API</a><br/>
 	    </div>
 	    <div class="content">
-	       <h2>Auto-Linkification</h2>
+	       <h2>Auto-Linkification and Hovercards</h2>
 
+		  <script type="text/javascript">
+		    twttr.anywhere.config({ callbackURL: "http://www.habuma.com/twitter/anywhere.html" });
+
+		    twttr.anywhere(function (T) {
+		      T("#suspicion").linkifyUsers();
+		      T("#foulplay").hovercards();
+		    });    
+		  </script>
+		
+			<p id="suspicion">During breakfast, @habuma questioned @venkat_s regarding the fire alarm.</p>
+			
+			<p id="foulplay">However, @habuma wasn't alone in his suspicion; @ntschutta and @neal4d also suspected foul play.</p>
 	    </div>
        </div>
 
-       <div>
-       </div>
     </body>
 
 

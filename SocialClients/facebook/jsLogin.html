@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.0.0.min.css">
         <link rel="stylesheet" href="http://www.habuma.com/social/css/style.css">
         <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+		<script src="/social/libs/jquery-1.7.min.js"></script>
     </head>
 
     <body style="margin-top:50px; margin-left:80px; margin-right:80px;">
@@ -18,6 +19,23 @@
 		      oauth      : true, 
 		      xfbml      : true  
 		    });
+		
+			FB.getLoginStatus(
+			    function(response) {
+			        if (response.authResponse) {
+						$("#loginButton").hide();
+						$("#logoutButton").show();
+						$("#postForm").show();
+			            console.log("Logged in!");
+			         } else {
+						$("#loginButton").show();
+						$("#logoutButton").hide();
+						$("#postForm").hide();
+			            console.log("Not logged in");
+			         }
+			    }
+			);
+		
 		  };
 
 		  // Load the SDK Asynchronously
@@ -43,12 +61,12 @@
 
                </div>
            </div>
-       	</div>
+       </div>
 
-       	<div class="container-fluid">
+       <div class="container-fluid">
             <div class="sidebar" id="sidemenu">
 			 <b>Javascript SDK</b><br/>
-			 TBD<br/>
+	         <a href="/social/facebook/jsLogin.html">FB.login() and FB.logout()</a><br/>
 			 <br/>
 			 <b>Social Plugins</b><br/>
 	         <a href="/social/facebook/login.html">Login Button</a><br/>
@@ -72,11 +90,116 @@
 	         <a href="/social/facebook/payDialog.html">Pay Dialog</a><br/>
 	         <a href="/social/facebook/requestDialog.html">Request Dialog</a><br/>
 	         <a href="/social/facebook/sendDialog.html">Send Dialog</a><br/>
-	    	</div>
-	    	<div class="content">
-	    		<h2>Recommendations Box (beta)</h2>
+	    </div>
+	    <div class="content">
+	       <h2>FB.login()</h2>
 
-			</div>
-		</div>
-	</body>
+			<script>
+				function lookupUser(userId) {
+					var userEndpoint = '/' + userId;
+                    FB.api(userEndpoint, function(response) {
+						$('#greeting').empty();
+						$('#greeting').append("Hello, " + response.name + "!");
+                    });					
+				}
+
+				function postToWall() {
+					var post =  $("#message").val();
+					console.log("About to post");
+					FB.api('/me/feed', 'post', { message: post }, function(response) {
+						if (!response || response.error) {
+							alert('Error occured');
+ 						} else {
+							alert('Post ID: ' + response.id);
+						}
+                    });					
+				}
+				
+				function readFeed() {
+					FB.api('/me/feed', function(response){
+						var data = jQuery.makeArray(response.data);
+						$(data).each(function(index, post) {
+							$('#feed').append("<li>" + post.message + "</li>");
+						});
+						// for (var i=0; i < data.length; i++) {
+						// 	$('#feed').append("<li>" + data[i].message + "</li>");
+						// }
+					});
+				}
+				
+				function pickTenFriends() {
+					var friendIds = FB.Data.query("SELECT uid2 FROM friend WHERE uid1=me() order by rand() limit 3");
+					var friends = FB.Data.query("SELECT uid, name FROM user WHERE uid in (SELECT uid2 FROM {0})", friendIds);
+
+					FB.Data.waitOn([friendIds,friends], function() {
+						FB.Array.forEach(friends.value, function(row){
+							alert(row.name);
+							$('#friends').append("<li>" + row.name + "</li>");
+						});
+					});
+
+					// friendIds.wait(function(rows) {
+					// 	alert(rows[0].uid2);
+					// });
+				}
+				
+				function fbLogin() {
+					FB.login(function(response) { 
+						if (response.authResponse) {
+							lookupUser(response.authResponse.userID);
+							$("#loginButton").hide();
+							$("#logoutButton").show();
+							$("#postForm").show();
+							readFeed();
+						}
+					});
+				}
+
+				function fbLoginWithScope() {
+					FB.login(function(response) { 
+						if (response.authResponse) {
+							lookupUser(response.authResponse.userID);
+							$("#loginButton").hide();
+							$("#logoutButton").show();
+							$("#postForm").show();
+							pickTenFriends();
+						}
+					}, { scope : 'user_about_me,read_stream,publish_stream' });
+				}
+				
+				function fbLogout() {
+					FB.logout(function(response) { 
+						$('#greeting').empty();
+						$('#greeting').append("Goodbye!");
+						$("#loginButton").show();
+						$("#logoutButton").hide();
+						$("#postForm").hide();
+					});
+				}
+			</script>
+			
+			<button id="loginButton" onclick="fbLoginWithScope();">Login</button>
+			
+			<button id="logoutButton" onclick="fbLogout();">Logout</button>
+			
+			<div id="greeting"></div>
+			
+			<form id="postForm">
+				<textarea id="message"></textarea>
+				<button onclick="postToWall();return false;">Post</button>
+			</form>
+			
+			<h4>Your feed</h4>
+			<ul id="feed">
+			</ul>
+
+			<h4>10 of your friends</h4>
+			<ul id="friends">
+			</ul>
+	    </div>
+       </div>
+
+    </body>
+
+
 </html>

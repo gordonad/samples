@@ -1,0 +1,13 @@
+.sidebar {
+     background-color: rgba(190, 190, 190, 0.2);
+     height:100%;
+}
+
+button {
+	background-color:#dff4ff;
+    border:1px solid #c2e1ef;
+    color:#336699;
+    width:auto;
+    overflow:visible;
+    padding:4px 10px 3px 7px; /* IE6 */
+}
