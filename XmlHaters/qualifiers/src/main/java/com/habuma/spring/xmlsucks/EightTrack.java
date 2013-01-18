@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 @Component
 @Qualifier("oldSchool")
 public class EightTrack implements Media {
-  public String play() {
-    System.out.println("8-Track playing");
-    return "Hotel California";
-  }
+    public String play() {
+        System.out.println("8-Track playing");
+        return "Hotel California";
+    }
 }

@@ -7,11 +7,11 @@ import org.springframework.stereotype.Component;
 @Component
 @Primary
 public class CompactDisc implements Media {
-  @Value("#{systemEnvironment['SONG']}")
-  private String title;
-  
-  public String play() {
-    System.out.println("PLAYING CD:  " + title);
-    return title;
-  }
+    @Value("#{systemEnvironment['SONG']}")
+    private String title;
+
+    public String play() {
+        System.out.println("PLAYING CD:  " + title);
+        return title;
+    }
 }

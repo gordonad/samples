@@ -13,5 +13,5 @@
 
     <artifactId>at-inject-custom-qualifiers</artifactId>
 
-	<name>XML Haters: @Inject Custom Qualifiers Example</name>
+    <name>XML Haters: @Inject Custom Qualifiers Example</name>
 </project>

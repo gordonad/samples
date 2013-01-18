@@ -13,6 +13,6 @@
 
     <artifactId>component-scanned</artifactId>
 
-	<name>XML Haters: @Component Example</name>
+    <name>XML Haters: @Component Example</name>
 
 </project>

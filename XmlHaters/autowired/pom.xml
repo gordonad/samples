@@ -13,5 +13,5 @@
 
     <artifactId>autowired</artifactId>
 
-	<name>XML Haters: @Autowired Example</name>
+    <name>XML Haters: @Autowired Example</name>
 </project>
