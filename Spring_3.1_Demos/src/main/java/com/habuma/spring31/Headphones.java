@@ -1,9 +1,14 @@
 package com.habuma.spring31;
 
-public class Headphones implements OutputDevice {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-	public void play() {
-		System.out.println("Playing through headphones");
-	}
+public class Headphones implements OutputDevice {
+    private static final Logger logger = LoggerFactory.getLogger(Headphones.class);
+
+    @Override
+    public void play() {
+        logger.debug("Playing through headphones");
+    }
 
 }
