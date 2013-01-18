@@ -1,8 +1,8 @@
-create table Guest (
-	id identity,
-	name varchar not null,
-	email varchar not null,
-	dateOfVisit timestamp not null
+CREATE TABLE Guest (
+	id IDENTITY,
+	NAME VARCHAR NOT NULL,
+	email VARCHAR NOT NULL,
+	dateOfVisit TIMESTAMP NOT NULL
 );
 
-insert into Guest (name, email, dateOfVisit) values ('Craig', 'craig@habuma.com', current_timestamp());
+INSERT INTO Guest (NAME, email, dateOfVisit) VALUES ('Craig', 'craig@habuma.com', CURRENT_TIMESTAMP());
