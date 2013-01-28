@@ -113,7 +113,7 @@
         <slf4j.version>1.7.2</slf4j.version>
         <spring-data-commons.version>1.4.0.RELEASE</spring-data-commons.version>
         <spring-data-jpa.version>1.2.0.RELEASE</spring-data-jpa.version>
-        <spring-framework.version>3.2.0.RELEASE</spring-framework.version>
+        <spring-framework.version>3.2.1.RELEASE</spring-framework.version>
         <spring-grails.version>2.2.0</spring-grails.version>
         <validation.version>1.0.0.GA</validation.version>
         <wtp.version>2.0</wtp.version>
@@ -666,58 +666,53 @@
                     </dependency>
                 </dependencies>
             </plugin>
-            <plugin>
-                <groupId>com.springsource.bundlor</groupId>
-                <artifactId>com.springsource.bundlor.maven</artifactId>
-                <version>1.0.0.RELEASE</version>
-            </plugin>
         </plugins>
     </build>
 
 
     <repositories>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>spring.central</id>
-            <name>libs-release-remote</name>
-            <url>http://repo.springsource.org/release</url>
-        </repository>
-        <repository>
-            <snapshots/>
-            <id>spring.snapshots</id>
-            <name>libs-snapshot-remote</name>
-            <url>http://repo.springsource.org/snapshot</url>
-        </repository>
-        <repository>
-            <snapshots/>
-            <id>spring.milestone</id>
-            <name>libs-milestone-remote</name>
-            <url>http://repo.springsource.org/milestone</url>
-        </repository>
+        <!--<repository>-->
+            <!--<snapshots>-->
+                <!--<enabled>false</enabled>-->
+            <!--</snapshots>-->
+            <!--<id>spring.central</id>-->
+            <!--<name>libs-release-remote</name>-->
+            <!--<url>http://repo.springsource.org/release</url>-->
+        <!--</repository>-->
+        <!--<repository>-->
+            <!--<snapshots/>-->
+            <!--<id>spring.snapshots</id>-->
+            <!--<name>libs-snapshot-remote</name>-->
+            <!--<url>http://repo.springsource.org/snapshot</url>-->
+        <!--</repository>-->
+        <!--<repository>-->
+            <!--<snapshots/>-->
+            <!--<id>spring.milestone</id>-->
+            <!--<name>libs-milestone-remote</name>-->
+            <!--<url>http://repo.springsource.org/milestone</url>-->
+        <!--</repository>-->
     </repositories>
     <pluginRepositories>
-        <pluginRepository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>spring.central.plugins</id>
-            <name>plugins-release</name>
-            <url>http://repo.springsource.org/release</url>
-        </pluginRepository>
-        <pluginRepository>
-            <snapshots/>
-            <id>spring.snapshots.plugins</id>
-            <name>plugins-snapshot</name>
-            <url>http://repo.springsource.org/snapshot</url>
-        </pluginRepository>
-        <pluginRepository>
-            <snapshots/>
-            <id>spring.milestone.plugins</id>
-            <name>plugins-milestone</name>
-            <url>http://repo.springsource.org/milestone</url>
-        </pluginRepository>
+        <!--<pluginRepository>-->
+            <!--<snapshots>-->
+                <!--<enabled>false</enabled>-->
+            <!--</snapshots>-->
+            <!--<id>spring.central.plugins</id>-->
+            <!--<name>plugins-release</name>-->
+            <!--<url>http://repo.springsource.org/release</url>-->
+        <!--</pluginRepository>-->
+        <!--<pluginRepository>-->
+            <!--<snapshots/>-->
+            <!--<id>spring.snapshots.plugins</id>-->
+            <!--<name>plugins-snapshot</name>-->
+            <!--<url>http://repo.springsource.org/snapshot</url>-->
+        <!--</pluginRepository>-->
+        <!--<pluginRepository>-->
+            <!--<snapshots/>-->
+            <!--<id>spring.milestone.plugins</id>-->
+            <!--<name>plugins-milestone</name>-->
+            <!--<url>http://repo.springsource.org/milestone</url>-->
+        <!--</pluginRepository>-->
     </pluginRepositories>
 
 
